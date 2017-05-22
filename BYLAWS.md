@@ -87,6 +87,7 @@ QMK is an unincorporated association and can not directly hold money or property
 * Paying for domain names, hosting services, or technical services QMK depends on
 * Paying for acquisition of copyrights of usable codebases
 * Paying for trademarks associated with QMK
+* Any other expense related to furthering and improving QMK firmware.
 
 ## Code Of Conduct
 
