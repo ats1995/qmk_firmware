@@ -35,11 +35,15 @@ QMK’s Collaborators are responsible for the project’s technical management. 
 
 #### Current collaborators (in order of seniority):
 
+* Fred Sundvik
+* Noah Andrews
+
 ### Members
 
 While Collaborators have wide latitude when choosing which contributions to accept, Members help set QMK’s technical direction. When it’s not clear how a change should be made Members will discuss and come to a consensus. All Members are also Collaborators.
 
 #### Current members (in order of seniority):
+
 * Jack Humbert
 * Erez Zukerman
 * Zach White
