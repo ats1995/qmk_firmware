@@ -35,9 +35,9 @@ QMK’s Collaborators are responsible for the project’s technical management. 
 
 #### Current collaborators (in order of seniority):
 
-* Fred Sundvik
-* Gergely Nagy
-* Drashna Jaelre
+* Fred Sundvik (@fredizzimo)
+* Gergely Nagy (@algernon)
+* Christopher Courtney (@drashna)
 
 ### Members
 
@@ -45,9 +45,9 @@ While Collaborators have wide latitude when choosing which contributions to acce
 
 #### Current members (in order of seniority):
 
-* Jack Humbert
-* Erez Zukerman
-* Zach White
+* Jack Humbert (@jackhumbert)
+* Erez Zukerman (@ezuk)
+* Zach White (@skullydazed)
 
 ## Decision Making
 
