@@ -36,7 +36,8 @@ QMK’s Collaborators are responsible for the project’s technical management. 
 #### Current collaborators (in order of seniority):
 
 * Fred Sundvik
-* Noah Andrews
+* Gergely Nagy
+* Drashna Jaelre
 
 ### Members
 
