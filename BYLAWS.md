@@ -38,6 +38,8 @@ QMK’s Collaborators are responsible for the project’s technical management. 
 * Fred Sundvik (@fredizzimo)
 * Gergely Nagy (@algernon)
 * Christopher Courtney (@drashna)
+* Yan-Fa Li (@yanfali)
+* Mark Merin (@mechmerlin)
 
 ### Members
 
