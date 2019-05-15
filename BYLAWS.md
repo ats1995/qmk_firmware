@@ -48,7 +48,6 @@ While Collaborators have wide latitude when choosing which contributions to acce
 #### Current members (in order of seniority):
 
 * Jack Humbert (@jackhumbert)
-* Erez Zukerman (@ezuk)
 * Zach White (@skullydazed)
 
 ## Decision Making
