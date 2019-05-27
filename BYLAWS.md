@@ -10,7 +10,8 @@ The goal of QMK is to help people build and customize their mechanical keyboard.
 
 ### Other QMK projects include:
 
-* The QMK Flasher, a tool for flashing AVR processors
+* The QMK Configurator
+* The QMK Toolbox, a flashing tool
 * The QMK Firmware Documentation
 * The qmk.fm site
 * The QMK bot
@@ -40,6 +41,7 @@ QMK’s Collaborators are responsible for the project’s technical management. 
 * Christopher Courtney (@drashna)
 * Yan-Fa Li (@yanfali)
 * Mark Merin (@mechmerlin)
+* James Young (@noroadsleft)
 
 ### Members
 
