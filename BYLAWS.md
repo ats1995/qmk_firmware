@@ -43,11 +43,11 @@ QMK’s Collaborators are responsible for the project’s technical management. 
 * Mark Merin (@mechmerlin)
 * James Young (@noroadsleft)
 
-### Members
+### Directors
 
-While Collaborators have wide latitude when choosing which contributions to accept, Members help set QMK’s technical direction. When it’s not clear how a change should be made Members will discuss and come to a consensus. All Members are also Collaborators.
+While Collaborators have wide latitude when choosing which contributions to accept, Directors help set QMK’s technical direction. When it’s not clear how a change should be made Directors will discuss and come to a consensus. All Directors are also Collaborators.
 
-#### Current members (in order of seniority):
+#### Current Directors (in order of seniority):
 
 * Jack Humbert (@jackhumbert)
 * Zach White (@skullydazed)
@@ -111,4 +111,4 @@ Our users, contributors, and collaborators are expected to treat each other with
 * Publishing others’ private information without explicit permission
 * Other conduct which could reasonably be considered inappropriate in a professional setting
 
-If someone is violating this Code of Conduct you may email hello@qmk.fm to bring your concern to the Members. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. 
+If someone is violating this Code of Conduct you may email hello@qmk.fm to bring your concern to the Directors. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. 
