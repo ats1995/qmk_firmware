@@ -42,6 +42,7 @@ QMK’s Collaborators are responsible for the project’s technical management. 
 * Yan-Fa Li (@yanfali)
 * Mark Merin (@mechmerlin)
 * James Young (@noroadsleft)
+* Joel Challis (@zvecr)
 
 ### Directors
 
