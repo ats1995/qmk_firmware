@@ -1,6 +1,8 @@
 #include <stdint.h>
 #include <stdbool.h>
+#if defined(__AVR__)
 #include <util/delay.h>
+#endif
 #include "matrix.h"
 #include "bootloader.h"
 #include "debug.h"
@@ -12,6 +14,10 @@
 
 keymap_config_t keymap_config;
 
+/** \brief Magic
+ *
+ * FIXME: Needs doc
+ */
 void magic(void)
 {
     /* check signature */
@@ -25,12 +31,8 @@ void magic(void)
     /* keymap config */
     keymap_config.raw = eeconfig_read_keymap();
 
-#ifdef NKRO_ENABLE
-    keyboard_nkro = keymap_config.nkro;
-#endif
-
     uint8_t default_layer = 0;
     default_layer = eeconfig_read_default_layer();
-    default_layer_set((uint32_t)default_layer);
+    default_layer_set((layer_state_t)default_layer);
 
 }
