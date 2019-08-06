@@ -51,16 +51,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 [_LOWER] = LAYOUT_planck_grid(
     KC_F1,     KC_F2,     KC_F3,     KC_F4,     KC_F5,     KC_F6,     KC_F7,     KC_F8,    KC_F9,      KC_F10,    KC_F11,    KC_F12,
-    KC_TRNS,   KVM1,      KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_LEFT,   KC_DOWN,  KC_UP,      KC_RGHT,   KC_APP,    KC_NO,
-    KC_INS,    KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_NO,     KC_HOME,   KC_PGDN,  KC_PGUP,    KC_END,    KC_PSCR,   KC_SLCK,
-    KC_CAPS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_LSFT,   KC_SPC,    KC_SPC,    KC_TRNS,  KC_TRNS,    KC_LALT,   KC_NO,     KC_PAUS
+    _______,   KVM1,      XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_LEFT,   KC_DOWN,  KC_UP,      KC_RGHT,   KC_APP,    XXXXXXX,
+    KC_INS,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_HOME,   KC_PGDN,  KC_PGUP,    KC_END,    KC_PSCR,   KC_SLCK,
+    KC_CAPS,   _______,   _______,   _______,   KC_LSFT,   KC_SPC,    KC_SPC,    _______,  _______,    KC_LALT,   XXXXXXX,   KC_PAUS
 
 ),
 [_RAISE] = LAYOUT_planck_grid(
     S(KC_GRV), S(KC_1),   S(KC_2),   S(KC_3),   S(KC_4),   S(KC_5),   S(KC_6),   S(KC_7),   S(KC_8),   S(KC_9),   S(KC_0),   S(KC_MINUS),
     KC_GRV,    KC_1,      KC_2,      KC_3,      KC_4,      KC_5,      KC_6,      KC_7,      KC_8,      KC_9,      KC_0,      KC_MINUS,
     KC_DEL,    KC_NUBS,   RALT(KC_2),RALT(KC_3),RALT(KC_4),KC_EQL, RALT(KC_RBRC),RALT(KC_7),RALT(KC_8),RALT(KC_9),RALT(KC_0),KC_BSLASH,
-    KC_TRNS,   S(KC_RBRC),KC_TRNS,   KC_TRNS,   KC_LSFT,   KC_SPC,    KC_SPC,    KC_TRNS,   KC_TRNS,   KC_LALT,   KC_TRNS,   KC_TRNS
+    _______,   S(KC_RBRC),_______,   _______,   KC_LSFT,   KC_SPC,    KC_SPC,    _______,   _______,   KC_LALT,   _______,  _______ 
 ),
 [_GAME] = LAYOUT_planck_grid(
     KC_1,      KC_TAB,    KC_Q,      KC_W,      KC_E,      KC_R,      KC_T,      KC_Y,      KC_U,      KC_I,      KC_O,      KC_P,
@@ -69,10 +69,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_4,      KC_5,      KC_LCTL,   KC_LALT,   KC_LSFT,   KC_SPC,    KC_SPC,    KC_F5,     KC_F9,     KC_ENT,    KC_F3,     DF(_QWERTY)
 ),
 [_FN] = LAYOUT_planck_grid(
-    KC_VOLU,   KC_TRNS,   KC_MS_U,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,  _______,    _______,   KC_TRNS,   DEBUG,
-    KC_MPLY,   KC_MS_L,   KC_MS_D,   KC_MS_R,   KC_TRNS,   KC_NO,     KC_WH_L,   KC_WH_D,  KC_WH_U,    KC_WH_R,   KC_TRNS,   KC_TRNS,
-    KC_VOLD,   KC_MPRV,   KC_MNXT,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_TRNS,  KC_TRNS,    KC_TRNS,   KC_TRNS,   KC_TRNS,
-    KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_MS_BTN2,KC_MS_BTN1,KC_TRNS,   KC_TRNS,   KC_TRNS,  KC_TRNS,    KC_TRNS,   KC_TRNS,   _______
+    KC_VOLU,   _______,   KC_MS_U,   _______,   _______,   _______,   _______,   _______,  _______,    _______,   _______,   DEBUG,
+    KC_MPLY,   KC_MS_L,   KC_MS_D,   KC_MS_R,   _______,   XXXXXXX,   KC_WH_L,   KC_WH_D,  KC_WH_U,    KC_WH_R,   _______,   _______,
+    KC_VOLD,   KC_MPRV,   KC_MNXT,   _______,   _______,   _______,   _______,   _______,  _______,    _______,   _______,   _______,
+    _______,   _______,   _______,   KC_MS_BTN2,KC_MS_BTN1,_______,   _______,   _______,  _______,    _______,   _______,   _______
 ),
 [_ADJUST] = LAYOUT_planck_grid(
     _______,   RESET,     DEBUG,     RGB_TOG,   RGB_MOD,   RGB_HUI,   RGB_HUD,   RGB_SAI,   RGB_SAD,    RGB_VAI,   RGB_VAD,   KC_DEL ,
@@ -108,7 +108,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
     case KVM1:
       if (record->event.pressed) {
-        SEND_STRING("TeSt");
+//        SEND_STRING(SS_TAP(X_SLCK));
+//        SEND_STRING(SS_TAP(X_SLCK));
+        SEND_STRING(SS_TAP(X_1) "1");
       }
       break;
   }
