@@ -1,35 +1,39 @@
-#ifndef CONFIG_USER_H
-#define CONFIG_USER_H
+#pragma once
 
-#include "../../config.h"
+#ifdef AUDIO_ENABLE
+    #define STARTUP_SONG SONG(PLANCK_SOUND)
+    // #define STARTUP_SONG SONG(NO_SOUND)
 
+    #define DEFAULT_LAYER_SONGS { SONG(QWERTY_SOUND), \
+                                  SONG(COLEMAK_SOUND), \
+                                  SONG(DVORAK_SOUND) \
+                                }
+#endif
 
 /*
-#define MOUSEKEY_ENABLE
-#ifdef PS2_USE_INT
-#define PS2_CLOCK_PORT  PORTD
-#define PS2_CLOCK_PIN   PIND
-#define PS2_CLOCK_DDR   DDRD
-#define PS2_CLOCK_BIT   2
-#define PS2_DATA_PORT   PORTD
-#define PS2_DATA_PIN    PIND
-#define PS2_DATA_DDR    DDRD
-#define PS2_DATA_BIT    1
+ * MIDI options
+ */
 
-#define PS2_INT_INIT()  do {    \
-    EICRA |= ((1<<ISC21) |      \
-              (0<<ISC20));      \
-} while (0)
-#define PS2_INT_ON()  do {      \
-    EIMSK |= (1<<INT2);         \
-} while (0)
-#define PS2_INT_OFF() do {      \
-    EIMSK &= ~(1<<INT2);        \
-} while (0)
-#define PS2_INT_VECT   INT2_vect
-#endif
+/* Prevent use of disabled MIDI features in the keymap */
+//#define MIDI_ENABLE_STRICT 1
+
+/* enable basic MIDI features:
+   - MIDI notes can be sent when in Music mode is on
 */
 
-#endif
+#define MIDI_BASIC
 
+/* enable advanced MIDI features:
+   - MIDI notes can be added to the keymap
+   - Octave shift and transpose
+   - Virtual sustain, portamento, and modulation wheel
+   - etc.
+*/
+//#define MIDI_ADVANCED
+
+/* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
+//#define MIDI_TONE_KEYCODE_OCTAVES 2
+
+// Most tactile encoders have detents every 4 stages
+#define ENCODER_RESOLUTION 4
 
