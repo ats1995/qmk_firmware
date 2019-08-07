@@ -34,8 +34,10 @@ enum planck_keycodes {
   DVORAK,
   BACKLIT,
   EXT_PLV,
-  TEST,
-  KVM1
+  KVM1,
+  KVM2,
+  KVM3,
+  KVM4
 };
 
 #define LOWER MO(_LOWER)
@@ -51,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 [_LOWER] = LAYOUT_planck_grid(
     KC_F1,     KC_F2,     KC_F3,     KC_F4,     KC_F5,     KC_F6,     KC_F7,     KC_F8,    KC_F9,      KC_F10,    KC_F11,    KC_F12,
-    _______,   KVM1,      XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_LEFT,   KC_DOWN,  KC_UP,      KC_RGHT,   KC_APP,    XXXXXXX,
+    _______,   KVM1,      KVM2,      KVM3,      KVM4,      XXXXXXX,   KC_LEFT,   KC_DOWN,  KC_UP,      KC_RGHT,   KC_APP,    XXXXXXX,
     KC_INS,    XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   KC_HOME,   KC_PGDN,  KC_PGUP,    KC_END,    KC_PSCR,   KC_SLCK,
     KC_CAPS,   _______,   _______,   _______,   KC_LSFT,   KC_SPC,    KC_SPC,    _______,  _______,    KC_LALT,   XXXXXXX,   KC_PAUS
 
@@ -101,16 +103,32 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
-    case TEST:
-      if (record->event.pressed) {
-        SEND_STRING("TeSt");
-      }
-      break;
     case KVM1:
       if (record->event.pressed) {
-//        SEND_STRING(SS_TAP(X_SLCK));
-//        SEND_STRING(SS_TAP(X_SLCK));
-        SEND_STRING(SS_TAP(X_1) "1");
+        tap_code(KC_SLCK);
+        tap_code(KC_SLCK);
+        SEND_STRING(SS_TAP(X_1));
+      }
+      break;
+    case KVM2:
+      if (record->event.pressed) {
+        tap_code(KC_SLCK);
+        tap_code(KC_SLCK);
+        SEND_STRING(SS_TAP(X_2));
+      }
+      break;
+    case KVM3:
+      if (record->event.pressed) {
+        tap_code(KC_SLCK);
+        tap_code(KC_SLCK);
+        SEND_STRING(SS_TAP(X_3));
+      }
+      break;
+    case KVM4:
+      if (record->event.pressed) {
+        tap_code(KC_SLCK);
+        tap_code(KC_SLCK);
+        SEND_STRING(SS_TAP(X_4));
       }
       break;
   }
