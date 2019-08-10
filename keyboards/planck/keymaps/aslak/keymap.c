@@ -59,8 +59,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_RAISE] = LAYOUT_planck_grid(
     NO_SECT, KC_EXLM, NO_QUO2, KC_HASH, NO_BULT, KC_PERC, NO_AMPR, NO_SLSH, NO_LPRN, NO_RPRN, NO_EQL,  NO_QUES,
     NO_PIPE, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    NO_PLUS,
-    KC_DEL,  NO_LESS, NO_AT,   NO_PND,  NO_DLR,  NO_ACUT, NO_TILD, NO_LCBR, NO_LBRC, NO_RBRC, NO_RCBR, KC_BSLASH,
-    _______, NO_CIRC, _______, _______, _______, KC_SPC,  KC_SPC,  _______, _______, _______, _______, _______
+    KC_DEL,  NO_LESS, NO_AT,   NO_PND,  NO_DLR,  NO_BSLS, NO_TILD, NO_LCBR, NO_LBRC, NO_RBRC, NO_RCBR, KC_BSLASH,
+    NO_ACUT, NO_CIRC, _______, _______, _______, KC_SPC,  KC_SPC,  _______, _______, _______, _______, XXXXXXX
 ),
 [_GAME] = LAYOUT_planck_grid(
     KC_1,    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
@@ -72,13 +72,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_VOLU, XXXXXXX, KC_MS_U, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,
     KC_MPLY, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX, XXXXXXX, KC_WH_L, KC_WH_D, KC_WH_U,  KC_WH_R, XXXXXXX, XXXXXXX,
     KC_VOLD, KC_MPRV, KC_MNXT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,
-    _______, KC_LCTRL,KC_LSFT, KC_BTN2, KC_BTN1, _______, _______, _______, _______,  _______, _______, _______
+    _______, KC_LCTRL,KC_LSFT, KC_BTN2, KC_BTN1, _______, _______, _______, _______,  _______, _______, XXXXXXX
 ),
 [_ADJUST] = LAYOUT_planck_grid(
     _______, RESET,   DEBUG,   RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD,  RGB_VAI, RGB_VAD, KC_DEL,
     _______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  _______,  _______, _______, _______,
     _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  TERM_ON, TERM_OFF, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______
+    _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, XXXXXXX
 )
 
 };
