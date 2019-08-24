@@ -44,6 +44,7 @@ QMK’s Collaborators are responsible for the project’s technical management. 
 * James Young (@noroadsleft)
 * Joel Challis (@zvecr)
 * Danny Nguyen (@nooges)
+* fauxpark
 
 ### Directors
 
