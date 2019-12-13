@@ -12,8 +12,12 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *
+ * Norweian keymap based on default keymap
  */
 
+#include "keymap_nordic.h"
 #include QMK_KEYBOARD_H
 #include "muse.h"
 
@@ -38,8 +42,8 @@ enum planck_keycodes {
   PLOVER,
   BACKLIT,
   EXT_PLV,
-  KVM1,
-  KVM2,
+  KVM1,      // Macros for switching inputs 
+  KVM2,      // on level1techs 4 port DP KVM
   KVM3,
   KVM4
 };
@@ -50,9 +54,9 @@ enum planck_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = LAYOUT_planck_grid(
-    KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,
-    KC_ESC,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
-    KC_BSPC,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_ENT,
+    KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     NO_AM,
+    KC_ESC,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     NO_AE,    NO_OSLH,
+    KC_BSPC,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   NO_MINS,  KC_ENT,
     MO(_FN),  KC_RALT,  KC_LCTRL, KC_LGUI,  KC_LSFT,  KC_SPC,   KC_SPC,   RAISE,    LOWER,    KC_LALT,  KC_RSFT,  DF(_GAME)
 ),
 [_LOWER] = LAYOUT_planck_grid(
@@ -62,15 +66,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPS,  _______,  _______,  _______,  _______,  KC_SPC,   KC_SPC,   _______, _______,   _______,  _______,  KC_PAUS
 ),
 [_RAISE] = LAYOUT_planck_grid(
-    S(KC_GRV),S(KC_1),  S(KC_2),  S(KC_3),  S(KC_4),  S(KC_5),  S(KC_6),  S(KC_7),  S(KC_8),  S(KC_9),  S(KC_0),  S(KC_MINUS),
-    KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINUS,
-    KC_DEL,KC_NUBS,RALT(KC_2),RALT(KC_3),RALT(KC_4),KC_EQL,RALT(KC_RBRC),RALT(KC_7),RALT(KC_8),RALT(KC_9),RALT(KC_0),KC_BSLASH,
-    _______,  S(KC_RBRC),_______,  _______, KC_LSFT,  KC_SPC,   KC_SPC,   _______,  _______,  KC_LALT,  _______,  _______
+    NO_GRV,   KC_EXLM,  NO_QUO2,  KC_HASH,  NO_BULT,  KC_PERC,  NO_AMPR,  NO_SLSH,  NO_LPRN,  NO_RPRN,  NO_EQL,   NO_QUES,
+    NO_HALF,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     NO_PLUS,
+    KC_DEL,   NO_LESS,  NO_AT,    NO_PND,   NO_DLR,   NO_ACUT,  NO_TILD,  NO_LCBR,  NO_LBRC,  NO_RBRC,  NO_RCBR,  NO_APOS,
+    _______,  NO_CIRC,  _______,  _______,  KC_LSFT,  KC_SPC,   KC_SPC,   _______,  _______,  KC_LALT,  _______,  _______
 ),
 [_GAME] = LAYOUT_planck_grid(
     KC_1,     KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
-    KC_2,     KC_ESC,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,
-    KC_3,     KC_6,     KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,
+    KC_2,     KC_ESC,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     NO_AE,
+    KC_3,     KC_6,     KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   NO_MINS,
     KC_4,     KC_5,     KC_LCTL,  KC_LALT,  KC_LSFT,  KC_SPC,   KC_SPC,   KC_F5,    KC_F9,    KC_ENT,   KC_F3,    DF(_QWERTY)
 ),
 [_FN] = LAYOUT_planck_grid(
