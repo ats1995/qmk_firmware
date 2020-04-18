@@ -50,6 +50,7 @@ enum planck_keycodes {
 
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
+#define KC_CAD LALT(LCTL(KC_DEL))
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -63,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,   KC_F9,     KC_F10,   KC_F11,   KC_F12,
     _______,  KVM1,     KVM2,     KVM3,     KVM4,     XXXXXXX,  KC_LEFT,  KC_DOWN, KC_UP,     KC_RGHT,  KC_APP,   XXXXXXX,
     KC_INS,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_HOME,  KC_PGDN, KC_PGUP,   KC_END,   KC_PSCR,  KC_SLCK,
-    KC_CAPS,  _______,  _______,  _______,  _______,  KC_SPC,   KC_SPC,   _______, _______,   _______,  _______,  KC_PAUS
+    KC_CAPS,  _______,  _______,  _______,  _______,  KC_SPC,   KC_SPC,   _______, _______,   _______,  KC_CAD,   KC_PAUS
 ),
 [_RAISE] = LAYOUT_planck_grid(
     NO_GRV,   KC_EXLM,  NO_QUO2,  KC_HASH,  NO_BULT,  KC_PERC,  NO_AMPR,  NO_SLSH,  NO_LPRN,  NO_RPRN,  NO_EQL,   NO_QUES,
