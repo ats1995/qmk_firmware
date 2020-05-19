@@ -3,11 +3,11 @@ SRC += muse.c
 #   change to "no" to disable the options, or define them in the Makefile in 
 #   the appropriate keymap folder that will get included automatically
 #
-BOOTMAGIC_ENABLE = no #yes  # Virtual DIP switch configuration(+1000)
+BOOTMAGIC_ENABLE = yes #yes  # Virtual DIP switch configuration(+1000)
 MOUSEKEY_ENABLE = yes       # Mouse keys(+4700)
 EXTRAKEY_ENABLE = yes       # Audio control and System control(+450)
-CONSOLE_ENABLE = no #yes    # Console for debug(+400)
-COMMAND_ENABLE = no         # Commands for debug and configuration
+CONSOLE_ENABLE = yes #yes    # Console for debug(+400)
+COMMAND_ENABLE = yes         # Commands for debug and configuration
 NKRO_ENABLE = no            # Nkey Rollover - if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 MIDI_ENABLE = no            # MIDI controls
@@ -19,4 +19,4 @@ RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.  Do not enable this 
 #PS2_USE_INT = yes
 
 # Stolen from generated layout with ORYX configurator https://configure.ergodox-ez.com/planck-ez/layouts/Krp9a/latest/0
-LINK_TIME_OPTIMIZATION_ENABLE = yes
+#LINK_TIME_OPTIMIZATION_ENABLE = yes
